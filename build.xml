@@ -7,25 +7,25 @@
 
     <target name="clean" description="clean all except war">
     	<ant antfile="build-counter.xml" target="clean" />
-    	<ant antfile="build-negotiate.xml" target="clean" />
+    	<ant antfile="negotiate.xml" target="clean" />
     	<ant antfile="build-time.xml" target="clean" />
     </target>
 
     <target name="distclean" depends="clean" description="clean all">
     	<ant antfile="build-counter.xml" target="distclean" />
-    	<ant antfile="build-negotiate.xml" target="distclean" />
+    	<ant antfile="negotiate.xml" target="distclean" />
     	<ant antfile="build-time.xml" target="distclean" />        
     </target>
 	
     <target name="redeployAll" depends="distclean" description="redoes everything">
     	<ant antfile="build-counter.xml" target="redeployWS" />
-    	<ant antfile="build-negotiate.xml" target="redeployWS" />
+    	<ant antfile="negotiate.xml" target="redeployWS" />
     	<ant antfile="build-time.xml" target="redeployWS" />        
     </target>
 
     <target name="undeployAll" description="undeploys all services">
     	<ant antfile="build-counter.xml" target="undeployWS" />
-    	<ant antfile="build-negotiate.xml" target="undeployWS" />
+    	<ant antfile="negotiate.xml" target="undeployWS" />
     	<ant antfile="build-time.xml" target="undeployWS" />        
     </target>
 

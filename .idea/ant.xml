@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <buildFile url="file://$PROJECT_DIR$/negotiate.xml" />
+    <buildFile url="file://$PROJECT_DIR$/service-build.xml" />
+  </component>
+</project>

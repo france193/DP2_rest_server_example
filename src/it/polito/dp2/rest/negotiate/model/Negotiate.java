@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Includes Min and Max and an id associated with the negotiation
  */
 @XmlRootElement
-public class Negotiate {
+public class  Negotiate {
 	
 	private float Max;
 	private float Min;
