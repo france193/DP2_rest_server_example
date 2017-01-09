@@ -1,0 +1,46 @@
+Setup necessary before running the examples
+-------------------------------------------
+In order to run these examples you need to have
+Tomcat 8 installed.
+After Tomcat installation, set the Tomcat-related
+properties in tomcat-build.xml.
+
+Each web service example has its own build-XXX.xml
+(which imports the generic ant scripts service-build.xml
+and tomcat-build.xml).
+Each web service example also has its own folder with a
+WebContent specific for that example and a index.html
+(with some information about the service).
+You can create a single eclipse java project for this
+package and then add the jars under lib to the build
+path.
+Alternatively, you can import the package as an
+eclipse project and then adjust the settings of the
+project (e.g. the reference to the JRE).
+DO NOT USE service-build.xml and tomcat-build.xml
+directly. Instead use the build.xml or the
+build-XXX.xml of each service (which imports them).
+
+In order to avoid duplications, the libraries needed
+by the services are located only in the main folder
+(under lib). Each build-XXX.xml will access them as
+necessary when creating the .war archive.
+
+Start tomcat by running the start-tomcat target
+(from build.xml or from any build-XXX.xml).
+
+How to run and test a service
+-----------------------------
+1. Deploy a service by running the deployWS target
+from the corresponding build-XXX.xml.
+(deployWS will first compile and package the service)
+
+2. You can interact with a service by using any general
+purpose client (e.g. the Firefox RESTClient plugin or
+the Chrome POSTMAN plugin or the command-line curl tool)
+or the client examples (previously released in a
+separate package).
+
+3. You can also use the other targets in the build-XXX.xml
+files for managing the service (start/stop, undeploy,
+reload).
